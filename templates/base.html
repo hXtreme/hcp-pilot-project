@@ -1,0 +1,34 @@
+{% from "macros.html" import include_material_design %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block nav_title %}{% endblock %} - {{ PROJECT_NAME }}</title>
+
+	{{ include_material_design() }}
+</head>
+<body class="mdc-typography">
+	<!-- Nav-Bar -->
+	<header>
+		<div id="site-header" class="mdc-top-app-bar__row">
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				<span class="mdc-top-app-bar__title">{{ PROJECT_NAME }}</span>
+			</section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+				<span class="mdc-top-app-bar__title">{{ PROJECT_NAME }}</span>
+			</section>
+		</div>
+	</header>
+
+	<!-- Child Template -->
+	{% block content %}{% endblock %}
+
+	<!-- Error -->
+	{% if error %}
+		<p>
+			<h4 class="mdc-typography--headline4">Error: </h4>
+			{{ error }}
+		</p>
+	{% endif %}
+</body>
+</html>
