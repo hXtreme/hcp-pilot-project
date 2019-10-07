@@ -1,3 +1,5 @@
+
+
 {% macro include_material_design() %}
 <!-- Material Design CSS -->
 <link href="static/material-components-web.min.css" rel="stylesheet">
@@ -9,5 +11,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 {% endmacro %}
 
+{% macro attach_material_components() %}
+	<script type="text/javascript">
+		// Attach all text-fields
+		var textFields = document.getElementsByClassName('text-field');
+		for (var i = textFields.length - 1; i >= 0; i--) {
+			mdc.textField.MDCTextField.attachTo(textFields[i])
+		}
+	</script>
+{% endmacro %}
 
-
+{% macro nav_links(endpoint, name) %}
+{% if request.endpoint.endswith(endpoint) %}
+	<a class="active nav-link" href="{{ url_for(endpoint) }}">{{name}}</a>
+{% else %}
+	<a class="nav-link" href="{{ url_for(endpoint) }}">{{name}}</a>
+{% endif %}
+{% endmacro %}
