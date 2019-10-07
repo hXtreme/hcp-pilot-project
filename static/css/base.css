@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+}
+
+.container {
+	margin: 1em;
+}
+
+#site-header {
+	background-color: rgb(200, 0, 0);
+}
+
+.nav-link {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
