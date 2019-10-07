@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
 
@@ -6,6 +6,10 @@ app = Flask(__name__)
 PROJECT_NAME = 'HCP'
 
 @app.route('/')
+def index():
+	return redirect(url_for('home'))
+
+@app.route('/home')
 def home():
 	return render_template("index.html", PROJECT_NAME=PROJECT_NAME)
 
