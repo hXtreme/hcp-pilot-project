@@ -16,7 +16,7 @@ python3 -m pip install virtualenv
 ```
 optionally you can use the `--user` flag with pip, see [docs](https://virtualenv.pypa.io/en/latest/installation/)
 
-+ flask
++ flask  
 We would like to install flask within the virtualenv instead of a system wide install.
 
 Go to the root folder for the project and activate the virtual enviorment with the following:
