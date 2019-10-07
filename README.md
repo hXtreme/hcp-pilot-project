@@ -32,7 +32,14 @@ python3 -m pip install Flask
 You are now set-up to use the project.
 
 ## Running
+Make sure that you've activated the virtualenv, you should see `(venv)` in your terminal prompt.
 
+Some thing like:
+```
+(venv) user@laptop: ~/hcp-pilot-project$
+```
+
+Now run the following, it should serve the page to localhost on some free port.
 ```
 python3 app.py
 ```
