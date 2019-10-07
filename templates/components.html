@@ -1,0 +1,14 @@
+{% macro component_search_bar(width) %}
+	<div class="search-bar text-field mdc-text-field 
+    mdc-text-field--outlined-shaped mdc-text-field--outlined mdc-text-field--with-leading-icon" style="max-width: 650px; width: {{width}};">
+		<i class="material-icons mdc-text-field__icon">search</i>
+		<input class="mdc-text-field__input" id="text-field-hero-input">
+		<div class="mdc-notched-outline mdc-notched-outline--upgraded">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="text-field-hero-input" class="mdc-floating-label">Find a Provider</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+{% endmacro %}
