@@ -20,9 +20,8 @@ def to_csv(json_file, csv_file):
 			]
 			records.append(record)
 	with open(csv_file, 'w') as fp:
-		for record in records:
-			print(record)
-			print(record[0], record[1], record[2], record[3], record[4], record[5], record[6], record[7], sep=', ', file=fp, flush=True)
+		csv_writer = csv.writer(fp)
+		csv_writer.writerows(records)
 	pass
 
 
