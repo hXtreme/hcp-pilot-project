@@ -26,7 +26,6 @@ class DB_table(Base):
 
 
 if __name__ == "__main__":
-    t = time()
 
     # Create the database
     engine = create_engine("mysql+pymysql://root:qwerty1234@localhost/googlemap?charset=utf8", max_overflow=5)
@@ -58,7 +57,6 @@ if __name__ == "__main__":
         })
 
         s.add(record)  # Add all the records
-    print(count)
     s.commit()
     s.close()  # Close the connection
     print('Data Added')
